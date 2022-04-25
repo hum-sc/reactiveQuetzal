@@ -1,0 +1,7 @@
+.mirror{
+    display: flex;
+    width: 890px;
+    height: 120px;
+    border-radius: 0 0 120px 120px;
+    object-fit: cover;
+}
