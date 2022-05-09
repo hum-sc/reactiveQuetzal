@@ -1,0 +1,24 @@
+.clockNumber{
+    position: absolute;
+    width: 70px;
+    font-size: 36px;
+    line-height: 0px;
+    text-align: center;
+    color: var(--secondary);
+}
+#clock{
+    position: relative;
+    display: block;
+    height: 70px;
+    width: 70px;
+    border: 2px;
+    border-style: dotted;
+}
+
+#h{
+    
+    bottom: 25%;
+}
+#m{
+    top:25%
+}
