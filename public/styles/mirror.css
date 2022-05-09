@@ -1,7 +1,93 @@
+.mirror-base{
+    display: flex;
+    width: 890px;
+    height: 120px;
+    border-radius: 0 0 120px 120px;
+    object-fit: cover;
+}
+.mirror-lights{
+    position: absolute;
+    width: 890px;
+    height: 120px;
+    border-radius: 0 0 120px 120px;
+    object-fit: cover;
+}
 .mirror{
     display: flex;
     width: 890px;
     height: 120px;
     border-radius: 0 0 120px 120px;
     object-fit: cover;
+}
+
+.mirror-base .left{
+    animation-name: leftside;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+}
+
+.mirror-base .right{
+    animation-name: rightside;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7);
+}
+
+.mirror-base .blinking{
+    animation-name: blinking;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7), inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+}
+
+.mirror-base .breaking{
+    box-shadow: inset 25px 15px 25px rgba(212, 10, 29, 0.7), inset -25px -15px 25px rgba(212, 10, 29, 0.7);
+}
+
+@keyframes blinking {
+    from{
+    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7), inset 20px 0px 10px rgba(233, 204, 9, 0.0);
+    }
+    25%{
+        box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7), inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+    }
+    50%{
+        box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7), inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+    }
+    to{
+        box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0), inset 20px 0px 10px rgba(233, 204, 9, 0);
+    }
+    
+}
+
+@keyframes rightside {
+    from{
+        box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.0);
+    }    
+    25%{
+    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7);
+    }
+    50%{
+    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7);
+    }
+    to{
+    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.0);
+    }
+}
+
+
+@keyframes leftside {
+    from{
+        box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.0);
+    }
+    25%{
+        box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+    }
+    50%{
+        box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+    }
+    to{
+        box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.0);
+    }
 }
