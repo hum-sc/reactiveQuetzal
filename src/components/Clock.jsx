@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-import { useTime } from '../hooks/data';
+import { useTime } from '../hooks/time';
 import '../../public/styles/clock.css';
 
 function Clock(props){
