@@ -1,7 +1,11 @@
 import React from "react";
 import {useState, useEffect} from 'react';
+/**
+ * Se encarga de recuperar el estado de las luces extenas del auto,
+ * como lo son las direccionales, intermitentes, de frenado y si estan activas las luces de vision
+ * @return {[boolean, boolean, boolean, boolean, string]} [isRight, isLeft, isBlinking, isBreaking, id]
+ */
 export function useTurnSignals(){
-    const [state, setState] = useState(false)
     const [isRight, setRight] = useState(false);
     const [isLeft, setLeft] = useState(false);
     const [isBlinking, setBlinking] = useState(false);

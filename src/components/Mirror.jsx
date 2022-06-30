@@ -9,7 +9,7 @@ function Mirror(props){
     const lights = useContext(Lights)
 
     return(<div className='mirror-base'>
-        <Webcam className= 'mirror'/>
+        <Webcam className= 'mirror' mirrored={true}/>
         <div className={'mirror-lights '+ (lights.isBreaking ? 'breaking' : '')}></div>
         <div className={'mirror-lights '+lights.id}></div>
     </div>);
