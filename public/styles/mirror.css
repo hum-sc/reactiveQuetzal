@@ -1,93 +1,95 @@
+
 .mirror-base{
+    --mirror-height: 120px;
     display: flex;
     width: 890px;
-    height: 120px;
-    border-radius: 0 0 120px 120px;
+    height: var(--mirror-height);
+    border-radius: 0 0 var(--mirror-height) var(--mirror-height);
     object-fit: cover;
 }
 .mirror-lights{
     position: absolute;
     width: 890px;
-    height: 120px;
-    border-radius: 0 0 120px 120px;
+    height: var(--mirror-height);
+    border-radius: 0 0 var(--mirror-height) var(--mirror-height);
     object-fit: cover;
 }
 .mirror{
     display: flex;
     width: 890px;
-    height: 120px;
-    border-radius: 0 0 120px 120px;
-    object-fit: cover;
+    height: var(--mirror-height);
+    border-radius: 0 0 var(--mirror-height) var(--mirror-height);
+    object-fit: fill;
 }
 
 .mirror-base .left{
     animation-name: leftside;
     animation-iteration-count: infinite;
     animation-duration: 1s;
-    box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+    box-shadow: inset 20px 0px 10px var(--yellow);
 }
 
 .mirror-base .right{
     animation-name: rightside;
     animation-iteration-count: infinite;
     animation-duration: 1s;
-    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7);
+    box-shadow: inset -20px 0px 10px var(--yellow);
 }
 
 .mirror-base .blinking{
     animation-name: blinking;
     animation-iteration-count: infinite;
     animation-duration: 1s;
-    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7), inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+    box-shadow: inset -20px 0px 10px var(--yellow);
 }
 
 .mirror-base .breaking{
-    box-shadow: inset 25px 15px 25px rgba(212, 10, 29, 0.7), inset -25px -15px 25px rgba(212, 10, 29, 0.7);
+    box-shadow: inset 25px 15px 25px var(--red), inset -25px -15px 25px var(--red);
 }
 
 @keyframes blinking {
     from{
-    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7), inset 20px 0px 10px rgba(233, 204, 9, 0.0);
+    box-shadow: inset -20px 0px 10px var(--transparent), inset 20px 0px 10px var(--transparent);
     }
     25%{
-        box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7), inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+        box-shadow: inset -20px 0px 10px var(--yellow), inset 20px 0px 10px var(--yellow);
     }
     50%{
-        box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7), inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+        box-shadow: inset -20px 0px 10px var(--yellow), inset 20px 0px 10px var(--yellow);
     }
     to{
-        box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0), inset 20px 0px 10px rgba(233, 204, 9, 0);
+        box-shadow: inset -20px 0px 10px var(--transparent), inset 20px 0px 10px var(--transparent);
     }
     
 }
 
 @keyframes rightside {
     from{
-        box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.0);
+        box-shadow: inset -20px 0px 10px var(--transparent);
     }    
     25%{
-    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7);
+    box-shadow: inset -20px 0px 10px var(--yellow);
     }
     50%{
-    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.7);
+    box-shadow: inset -20px 0px 10px var(--yellow);
     }
     to{
-    box-shadow: inset -20px 0px 10px rgba(233, 204, 9, 0.0);
+    box-shadow: inset -20px 0px 10px var(--transparent);
     }
 }
 
 
 @keyframes leftside {
     from{
-        box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.0);
+        box-shadow: inset 20px 0px 10px var(--transparent);
     }
     25%{
-        box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+        box-shadow: inset 20px 0px 10px var(--yellow);
     }
     50%{
-        box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.7);
+        box-shadow: inset 20px 0px 10px var(--yellow);
     }
     to{
-        box-shadow: inset 20px 0px 10px rgba(233, 204, 9, 0.0);
+        box-shadow: inset 20px 0px 10px var(--transparent);
     }
 }

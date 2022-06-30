@@ -1,0 +1,180 @@
+.heatMap{
+    position: relative;
+    width: 330px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: var(--backgroundWidget);
+}
+
+.heatMap#horizontal{
+    width: 330px;
+    height: 330px;
+}
+
+.quetzal{
+    position: absolute;
+    width: 137px;
+    height: 298px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.heatMap#horizontal .quetzal{
+    transform: rotate(90deg);
+}
+
+.cabina{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.battery{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 57px;
+    height: 139px;
+}
+
+.batteryDraw{
+    position: inherit;
+}
+.batteryNumber{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    color:var(--principal);
+}
+.heatMap#horizontal .batteryNumber{
+    transform: rotate(-90deg);
+}
+
+
+
+
+.wheel#fr{
+    position: absolute;
+    top: 41px;
+    right: 18px;
+}
+.wheel#fl{
+    position: absolute;
+    top: 41px;
+    left: 18px
+}
+
+.backWheel{
+    position:absolute;
+    height: 46.24px;
+    width: 40.46px;
+    display: flex;
+    align-items: center;
+    bottom: 26px;
+
+}
+
+.backWheel#br{
+    transform: rotate(180deg);
+    right: 18px;
+}
+.backWheel#bl{
+    left: 18px;
+}
+
+.dataHeat{
+    position:absolute;
+    color: var(--principal);
+    height: fit-content;
+    width: 60px;
+}
+
+.dataHeat-Text{
+    margin: 0;
+    color: var(--secondary);
+}
+
+.dataHeat-Item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dataHeat-Icon{
+    height: 24px;
+    width: 24px;
+}
+
+
+
+.dataHeat#dataFR{
+    top: 98px;
+    right: 20px;
+}
+.dataHeat#dataFL{
+    top: 98px;
+    left: 20px;
+}
+
+.dataHeat#dataBR{
+    bottom: 79px;
+    right: 20px;
+}
+.dataHeat#dataBL{
+    bottom: 79px;
+    left: 20px;
+}
+
+.dataHeat#dataSun{
+    width: 60px;
+    top: 15px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    margin: auto;
+}
+
+#dataCab{
+    position: absolute;
+    display: block;
+    width: 60px;
+    bottom: 17px;
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+.heatMap#horizontal .dataHeat#dataFL {
+    top: 10px;
+    left: auto;
+    right: 20px;
+}
+.heatMap#horizontal .dataHeat#dataFR {
+    bottom: 10px;
+    top: auto;
+    right: 20px;
+}
+
+.heatMap#horizontal .dataHeat#dataBL {
+    bottom: auto;
+    top: 10px;
+}
+.heatMap#horizontal .dataHeat#dataBR {
+    bottom: 10px;
+    left: 20px;
+    right: auto;
+}

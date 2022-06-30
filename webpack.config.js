@@ -36,7 +36,25 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
-            }
+            },
+            //Cargar imagenes
+            {
+                test:/\.(png|jp(e*)g|svg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[hash]-[name].[ext]',
+                        }
+                    },
+                ],
+            },
+            //Usar SVGr para crear svg como componente react
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack']
+            },
+
         ]
     },
     plugins: [
