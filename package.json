@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development --port 3000 --host localhost"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/hum-sc/reactiveQuetzal#readme",
   "dependencies": {
+    "mapbox-gl": "^2.9.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-webcam": "^7.0.1"
@@ -32,6 +33,7 @@
     "babel-loader": "^8.2.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "css-loader": "^6.7.1",
+    "dotenv-webpack": "^7.1.1",
     "file-loader": "^6.2.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",

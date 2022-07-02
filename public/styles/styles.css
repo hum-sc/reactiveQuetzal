@@ -7,13 +7,13 @@ body{
     --principal:#FFFFFF;
     --secondary: rgba(135, 135, 135, 1);
 
-    --red: rgba(212, 10, 29, 1);
+    --red: #d40a1d;
     --halfRed: rgba(212, 10, 29, .5);
 
     --yellow: rgba(233, 204, 9,1);
     --halfYellow:rgba(233, 204, 9,.5);
 
-    --green: rgba(58, 212, 10, 1);
+    --green: rgb(58, 212, 10);
     --halfGreen: rgba(58, 212, 10, .5);
 
     --blue:rgba(36,150,170,1);
@@ -24,12 +24,12 @@ body{
     background-color: var(--background);
 
     --cardRadius: 20px;
+    --miniRadius: 8px;
 }
 #base{
     display:flex;
-    height: 100vh;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content:flex-start;
     align-items: center;
 
 }
@@ -50,4 +50,8 @@ h2{
     line-height: 14px;
     letter-spacing: -0.01em;
 
+}
+
+.mapboxgl-ctrl-logo{
+    display: none;
 }

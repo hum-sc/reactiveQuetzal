@@ -1,0 +1,68 @@
+.navigationMap{
+    height: 400px;
+    width: 700px;
+    position: relative;
+    border-radius: var(--cardRadius);
+    overflow: hidden;
+}
+
+.map-container{
+    height: 400px;
+    width: 700px;
+    z-index: 0;
+}
+
+
+.routeManager{
+    background-color: var(--backgroundWidget);
+    position: absolute;
+    z-index: 3;
+    box-shadow: 0px 0px 3px var(--secondary);
+    top: 5px;
+    left: 5px;
+    width: 46px;
+    height: 46px;
+    transition: all 0.5s ease-in-out;
+}
+
+#closed.routeManager{
+    border-radius: var(--cardRadius);
+     /* This timing applies on the way OUT */
+
+}
+#opened.routeManager{
+    border-radius: var(--cardRadius);
+    height: calc(100% - 10px);
+
+    /* Quick on the way out */
+    
+    width: 30%;
+}
+
+
+.routeEditor{
+    position: absolute;
+    width: 100%;
+}
+
+
+.routeIcon{
+    height: 24px;
+    width: 24px;
+}
+
+.routeIcon#close{
+    position: absolute;
+    top:5px;
+    right: 5px;
+}
+
+.routeIcon#directions{
+    position: absolute;
+    padding:0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
