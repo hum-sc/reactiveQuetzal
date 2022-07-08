@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MotorIcon(props){
+export default function MotorIcon(props: { className: string; color: string; }){
     return (
         <svg className={props.className}
             width="24"

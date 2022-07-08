@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function DirectionsIcon(props){
+export default function DirectionsIcon(props: { onClick: React.MouseEventHandler<SVGSVGElement>; className: string; id: string; color: string; }){
 
     return(
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" onClick={props.onClick} className={props.className} id={props.id}>

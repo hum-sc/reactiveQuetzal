@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 body{
-    --background:#3C3C3C;
+    --background:rgb(60, 60, 60);
+    --backgroundTraslucent: rgba(60, 60, 60, .4);
     --backgroundWidget: #353535;
+    --backgroundWidgetTraslucent: rgba(53, 53, 53, .8);
 
     --principal:#FFFFFF;
     --secondary: rgba(135, 135, 135, 1);
@@ -25,6 +27,7 @@ body{
 
     --cardRadius: 20px;
     --miniRadius: 8px;
+    color: var(--principal);
 }
 #base{
     display:flex;
@@ -33,15 +36,55 @@ body{
     align-items: center;
 
 }
-
-h2{
+h1{
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 700;
+    font-size: 64px;
+    line-height: 88px;
+}
+h2 {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 50px;
+}
+h3.semibold{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight:600;
     font-size: 24px;
     line-height: 33px;
 }
-
+h4 {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+h4.semibold{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+}
+h5{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 33px;
+}
+h5.semibold{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 33px;
+}
 .auxiliar{
     font-family: 'Inter';
     font-style: normal;

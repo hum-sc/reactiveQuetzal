@@ -2,9 +2,12 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import { useTime } from '../hooks/time';
 import '../../public/styles/clock.css';
+
 const secondary = 'var(--secondary)'
 
-function Clock(props){
+useTime
+
+function Clock(){
     const [hours, minutes, seconds] = useTime();
 
     return <div className='menu-item' id='clock'>
