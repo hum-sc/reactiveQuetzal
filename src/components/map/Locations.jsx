@@ -108,14 +108,14 @@ export default function Locations (props) {
         selectedCoordUpdate();
     }, [selectedCoord])
 
-    const items = inputsValues.map((value, index) => <input type='text' key={index} name={index} onChange={onChangeInputValue} value={value}  onFocus={onFocus}/>)
-
+    const items = inputsValues.map((value, index) => <input type='text' key={index} id={(index == route.coordId) && 'selected'} name={index} onChange={onChangeInputValue} value={value}  onFocus={onFocus}/>)
     return (
         <div className="locationsInputs">
             {items}
             <button onClick={newCoord}>Añadir destino</button>
             <button onClick={onCreate}>Crear ruta</button>
-            {isRouteCreated && 
+            {console.log(route.route.type)}
+            {(isRouteCreated && route.route.type) && 
                 <>
                     <p className="auxiliar">{distance}</p>
                     <p className="auxiliar">{duration}</p>
