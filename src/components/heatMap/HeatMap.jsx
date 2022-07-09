@@ -4,7 +4,7 @@ import MotorIcon from '../../../public/media/images/MotorIcon';
 import '../../../public/styles/heatMap.css'
 import { useHeatSensors } from '../../hooks/heat';
 import Battery from './BatteryHeat';
-import Cabina from './CabinaHeat';
+import CockPit from './CockPitHeat';
 import Data, { DataBack, DataSun } from './DataHeat';
 import { Wheel, BackWheel } from './WheelHeat';
 
@@ -46,7 +46,7 @@ function HeatMap(props){
                 <Wheel id='fl' stroke={colorTemperatura(wheelFL)[0]} fill={colorTemperatura(wheelFL)[1]}/>
                 <BackWheel id='br' fillWheel={colorTemperatura(wheelBR)[1]} strokeWheel={colorTemperatura(wheelBR)[0]} fillMotor={colorTemperatura(motorR)[0]}/>
                 <BackWheel id='bl' fillWheel={colorTemperatura(wheelBL)[1]} strokeWheel={colorTemperatura(wheelBL)[0]} fillMotor={colorTemperatura(motorL)[0]}/>
-                <Cabina stroke={colorTempCab(cockPit)}/>
+                <CockPit stroke={colorTempCab(cockPit)}/>
                 <Battery heat={battery} stroke={colorTemperatura(battery)[0]} fill={colorTemperatura(battery)[1]}/>
             </div>
         </div>

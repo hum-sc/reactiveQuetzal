@@ -5,7 +5,7 @@ import '../../public/styles/mirror.css'
 import { useTurnSignals } from '../hooks/lights';
 import { Lights } from '../context/lightContext';
 
-function Mirror(props){
+function Mirror(){
     const lights = useContext(Lights)
 
     return(<div className='mirror-base'>

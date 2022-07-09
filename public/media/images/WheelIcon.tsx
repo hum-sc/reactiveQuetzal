@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WheelIcon(props){
+export default function WheelIcon(props: { className: string; color: string; }){
     return(
         <svg className={props.className}
             width="24"

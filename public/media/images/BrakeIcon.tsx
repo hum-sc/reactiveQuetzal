@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BrakeIcon(props){
+export default function BrakeIcon(props: { className: string; color: string; }){
     return(
         <svg className={props.className}
                 width="24"

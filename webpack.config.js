@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     mode: "production",
@@ -8,15 +9,27 @@ module.exports = {
     //punto de salida
     output:{
         //donde se guarda el punto de salida
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         //el nombre del punto de salida
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
     },
     module: {
         rules: [
+            {
+                test: /\.(ts|tsx)$/,
+                loader: "ts-loader",
+            },
+            {
+                enforce: "pre",
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use:{
+                    loader: 'babel-loader'
+                }
+            },
             {
                 //ESta expresion dice que vamos a ocupar los archivos que terminan en js y jsx
                 test: /\.(js|jsx)$/,
@@ -62,6 +75,7 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./public/index.html",
             file: "./index.html"
-        })
+        }),
+        new Dotenv()
     ]
 }
