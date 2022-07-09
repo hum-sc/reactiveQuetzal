@@ -88,8 +88,7 @@ export default function Locations (props) {
     }
 
     const newCoord = ()=>{
-        let id = route.coordId + 1;
-
+        let id = route.coordinates.length;
         let tmp = [...inputsValues]
         tmp[id] = '';
         setInputsValues(tmp);
@@ -101,14 +100,19 @@ export default function Locations (props) {
         route.setTravel(true);
     }
 
+    const onFocus = (event) => {
+        route.setCoordId(event.target.name);
+    }
+
     useEffect(()=>{
         selectedCoordUpdate();
     }, [selectedCoord])
 
+    const items = inputsValues.map((value, index) => <input type='text' key={index} name={index} onChange={onChangeInputValue} value={value}  onFocus={onFocus}/>)
 
     return (
         <div className="locationsInputs">
-            {inputsValues.map((value, index) => <input key={index} name={index} onChange={onChangeInputValue} value={value} />)}
+            {items}
             <button onClick={newCoord}>Añadir destino</button>
             <button onClick={onCreate}>Crear ruta</button>
             {isRouteCreated && 

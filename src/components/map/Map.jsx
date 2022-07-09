@@ -80,7 +80,7 @@ export default function Map(){
             map.current.removeLayer('route')
             map.current.removeSource('route')
         }
-        for (let i = 0; i <= route.coordId; i++){
+        for (let i = 0; i <= route.coordinates.length; i++){
             if (map.current.getSource(`point-${i}`)){
                 map.current.removeLayer(`point-${i}`)
                 map.current.removeSource(`point-${i}`)

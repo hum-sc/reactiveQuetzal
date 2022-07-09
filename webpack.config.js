@@ -9,7 +9,7 @@ module.exports = {
     //punto de salida
     output:{
         //donde se guarda el punto de salida
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'docs'),
         //el nombre del punto de salida
         filename: 'bundle.js'
     },

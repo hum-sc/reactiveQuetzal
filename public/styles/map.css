@@ -92,6 +92,8 @@
 
 }
 
+
+
 .locationsInputs{
     background-color: var(--backgroundWidgetTraslucent);
     height: fit-content;
@@ -100,6 +102,8 @@
     padding: 10px;
     
 }
+
+
 
 .routeContent{
     background-color: var(--backgroundWidgetTraslucent);
@@ -114,3 +118,4 @@
 .routeContent h5{
 
 }
+
