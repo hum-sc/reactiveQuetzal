@@ -26,6 +26,48 @@ export function useHeatSensors(){
     const [brakeBL, setBrakeBL] = useState(0);
 
     const [panel, setPanel] = useState(0);
+
+    function aleatorio(inferior, superior) {
+        var numPosibilidades = superior - inferior;
+        var aleatorio = Math.random() * (numPosibilidades + 1);
+        aleatorio = Math.floor(aleatorio);
+        return inferior + aleatorio;
+    }
+
+    const updateWheelsValues = () => {
+        setWheelFR(aleatorio(0, 120));
+        setWheelBR(aleatorio(0, 120));
+        setWheelFL(aleatorio(0, 120));
+        setWheelBL(aleatorio(0, 120));
+        setCockPit(aleatorio(0,50));
+        setMotorL(aleatorio(0,120));
+        setMotorR(aleatorio(0,120));
+        setBattery(aleatorio(0,120));
+        setBrakeBL(aleatorio(0,120));
+        setBrakeBR(aleatorio(0,120));
+        setBrakeFL(aleatorio(0,120));
+        setBrakeFR(aleatorio(0,120));
+        setPanel(aleatorio(0,120));
+    }
+
+    const updateCabValues = () => {
+    } 
+    useEffect(()=>{
+        let wheels = setInterval(updateWheelsValues, 250)
+        
+
+        return ()=>{
+            clearInterval(wheels);
+            
+        }
+    });
+
+    useEffect(()=>{
+        let cab = setInterval(updateCabValues, 2000)
+        return () => {
+            clearInterval(cab);
+        }
+    })
     
     return [wheelFR, wheelFL, wheelBR, wheelBL, motorL, motorR, brakeFR, brakeFL, brakeBR, brakeBL, battery, cockPit, panel];
 }

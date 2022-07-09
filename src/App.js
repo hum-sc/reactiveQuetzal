@@ -13,13 +13,17 @@ import {RouteProvider} from "./context/routeContext";
 function App (){
     return (<div id="base">
     <LightsProvider>
+        <Mirror/>
         <GpsProvider>
+
             <RouteProvider>
+                
                 <Map/>
-                <HeatMap/>
-                <Clock/>
+                
             </RouteProvider>
         </GpsProvider>
+        <HeatMap/>
+        <Clock/>
        
     </LightsProvider>
     </div>);

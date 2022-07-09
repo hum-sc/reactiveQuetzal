@@ -76,16 +76,21 @@ export default function Map(){
         route.setCoordinates([]);
         route.setSelectedCoord([]);
         route.setInputsValues(['']);
-        if(map.current.getSource('route')) {
-            map.current.removeLayer('route')
-            map.current.removeSource('route')
-        }
+        deleteRoute();
         for (let i = 0; i <= route.coordinates.length; i++){
             if (map.current.getSource(`point-${i}`)){
                 map.current.removeLayer(`point-${i}`)
                 map.current.removeSource(`point-${i}`)
             }
         }
+    }
+
+    const deleteRoute = () => {
+        if(map.current.getSource('route')) {
+            map.current.removeLayer('route')
+            map.current.removeSource('route')
+        }
+        route.setRoute({})
     }
 
     /**
@@ -114,7 +119,7 @@ export default function Map(){
      * @param {*} e 
      */
     const getCordinate = (e) => {
-
+        deleteRoute();
         const coord = [e.lngLat.lng, e.lngLat.lat];
         setSelectedCoord(coord);
         const data = {

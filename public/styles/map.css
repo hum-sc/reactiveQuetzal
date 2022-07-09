@@ -17,7 +17,7 @@
 
 
 .routeManager{
-    background-color: var(--backgroundTraslucent);
+    background-color: var(--backgroundWidget);
     position: absolute;
     display: flex;
     z-index: 1;
@@ -95,7 +95,7 @@
 
 
 .locationsInputs{
-    background-color: var(--backgroundWidgetTraslucent);
+    background-color: var(--background);
     height: fit-content;
     width: calc(100% - 20px);
     border-radius: var(--cardRadius);
@@ -106,7 +106,7 @@
 
 
 .routeContent{
-    background-color: var(--backgroundWidgetTraslucent);
+    background-color: var(--background);
     max-height: calc( 100% - 50px);
     height: fit-content;
     border-radius: var(--cardRadius);
