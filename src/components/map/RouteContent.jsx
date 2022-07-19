@@ -9,12 +9,14 @@ export default function RouteContent(props){
 
     const elements = segments.map((val, index) => {
 
-        const steps = instructions[index].steps.map(value => <p className="auxiliar">{value.instruction}</p>);
-        return (<>
+        const steps = instructions[index].steps.map((value, indx) => <p key={indx} className="auxiliar step">{value.instruction}</p>);
+        return (<div className={index} key={index}>
             <h5>{val}</h5>
             {steps}
-        </>)
+        </div>)
     })
+
+    console.log(elements)
 
     return(
     <div className="routeContent">

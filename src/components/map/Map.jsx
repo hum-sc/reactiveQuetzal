@@ -183,10 +183,11 @@ export default function Map(){
 
     //Se encarga de crear el mapa y poner los valores iniciales
     useEffect(()=>{
+        if (gps.lat ==null) return;
         if (map.current) return; // initialize map only once
         generateMap();
         updateMapData();
-    },[]);
+    });
 
     //Crea el listening del click
     useEffect(()=>{
@@ -207,7 +208,11 @@ export default function Map(){
         return () => map.current.off('move', updateMapData);
     });
     // Escucha los cambios en la ruta
-    useEffect(() => drawRoute(route.route), [route.route]);
+    useEffect(() => {
+        if (!map.current) return;
+
+        drawRoute(route.route)
+    }, [route.route]);
     
     return(
         <div className="navigationMap">
