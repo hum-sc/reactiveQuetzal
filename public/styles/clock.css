@@ -34,3 +34,7 @@
 #m{
     top:25%
 }
+.clockBar{
+    animation: dash 5s linear forwards;
+}
+

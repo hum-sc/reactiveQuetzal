@@ -1,0 +1,66 @@
+.velocimetro{
+    position: relative;
+    height: 120px;
+    width: 120px;
+    background-color: var(--backgroundWidget);
+    border-radius: 50%;
+}
+.velocimetro h2{
+    position: absolute;
+    width: fit-content;
+    margin: 0;
+    display: block;
+    top: 15%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#velBar{
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 0;
+}
+
+.line{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 0px;
+    width: 100px;
+    border-top: solid 1px var(--secondary);
+    padding: 0;
+}
+
+
+.kmh{
+    position: absolute;
+    display: block;
+    color: var(--secondary);
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: 0 auto;
+}
+.kmh#h{
+    top: 75%;    
+}
+
+.kmh#km{
+    top: 60%;
+}
+
+.line#kmh{
+    width: 19px;
+    top: 74%;
+    margin: 0 auto;
+}

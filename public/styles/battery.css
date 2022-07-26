@@ -1,0 +1,48 @@
+.batteryContainer{
+    position: relative;
+    width: 260px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: var(--backgroundWidget);
+}
+
+.batteryIcon{
+    
+position: absolute;
+width: 60px;
+height: 60px;
+left: 0;
+right: 0;
+top: calc(50% - 60px);
+margin: auto;
+
+transform: rotate(90deg);
+}
+
+.charge{
+    position: absolute;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    top: 36%;
+    margin: auto;
+}
+.duration{
+    position: absolute;
+    width: fit-content;
+    color: var(--secondary);
+    left: 0;
+    right: 0;
+    bottom: 26%;
+    margin: auto;
+}
+
+.km{
+    position: absolute;
+    width: fit-content;
+    color: var(--secondary);
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    margin: auto;
+}
