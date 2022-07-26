@@ -53,7 +53,7 @@ export function useHeatSensors(){
     const updateCabValues = () => {
     } 
     useEffect(()=>{
-        let wheels = setInterval(updateWheelsValues, 250)
+        let wheels = setInterval(updateWheelsValues, 2000)
         
 
         return ()=>{

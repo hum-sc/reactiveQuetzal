@@ -8,12 +8,13 @@ import HeatMap from "./components/heatMap/HeatMap";
 import Map from "./components/map/Map";
 import {GpsProvider} from "./context/gpsContext";
 import {RouteProvider} from "./context/routeContext";
+import Battery from "./components/Battery";
+import Velocimetro from "./components/Velocimetro";
 //Aqui tendremos la logica
 
 function App (){
     return (<div id="base">
     <LightsProvider>
-        <Mirror/>
         <GpsProvider>
 
             <RouteProvider>
@@ -22,8 +23,10 @@ function App (){
                 
             </RouteProvider>
         </GpsProvider>
+        <Velocimetro/>
         <HeatMap/>
         <Clock/>
+        <Battery/>
        
     </LightsProvider>
     </div>);

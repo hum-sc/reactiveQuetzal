@@ -2,21 +2,21 @@
 .mirror-base{
     --mirror-height: 120px;
     display: flex;
-    width: 890px;
+    width: 850px;
     height: var(--mirror-height);
     border-radius: 0 0 var(--mirror-height) var(--mirror-height);
     object-fit: cover;
 }
 .mirror-lights{
     position: absolute;
-    width: 890px;
+    width: 850px;
     height: var(--mirror-height);
     border-radius: 0 0 var(--mirror-height) var(--mirror-height);
     object-fit: cover;
 }
 .mirror{
     display: flex;
-    width: 890px;
+    width: 850px;
     height: var(--mirror-height);
     border-radius: 0 0 var(--mirror-height) var(--mirror-height);
     object-fit: fill;

@@ -1,5 +1,6 @@
-import React, { createContext, FC, ReactNode, useState } from "react";
+import React, { createContext, FC, ReactNode, useEffect, useState } from "react";
 import {Gps, Props} from '../interfaces'
+import useGps from '../hooks/gps'
 
 
 export const GpsContext = createContext<Gps>({
@@ -10,8 +11,7 @@ export const GpsContext = createContext<Gps>({
 
 
 export function  GpsProvider ({children}: Props): JSX.Element {
-    const [lng, setLng] = useState(-99.46785337072336);
-    const [lat, setLat] = useState(19.26942918888649);
+    const [lng, lat] = useGps();
     return(
         <GpsContext.Provider value={
             {
