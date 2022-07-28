@@ -10,26 +10,32 @@ import {GpsProvider} from "./context/gpsContext";
 import {RouteProvider} from "./context/routeContext";
 import Battery from "./components/Battery";
 import Velocimetro from "./components/Velocimetro";
+import Solar from "./components/Solar";
 //Aqui tendremos la logica
 
 function App (){
-    return (<div id="base">
-    <LightsProvider>
-        <GpsProvider>
-
-            <RouteProvider>
-                
-                <Map/>
-                
-            </RouteProvider>
-        </GpsProvider>
-        <Velocimetro/>
-        <HeatMap/>
-        <Clock/>
-        <Battery/>
-       
-    </LightsProvider>
-    </div>);
+    return (<>
+        <div id="base">
+            <LightsProvider>
+                <Mirror/>
+                <div className="widgetContainer">
+                    <GpsProvider>
+                        <RouteProvider>
+                            <Map/>
+                        </RouteProvider>
+                    </GpsProvider>
+                    <Solar/>
+                    <Velocimetro/>
+                    <HeatMap/>
+                    
+                    <Battery/>
+                </div>
+            </LightsProvider>
+        </div>
+        <div className="menu">
+            <Clock/>
+        </div>
+    </>);
 }
 
 export default App

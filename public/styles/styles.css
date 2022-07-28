@@ -29,12 +29,60 @@ body{
     --miniRadius: 8px;
     color: var(--principal);
 }
+#app{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
 #base{
     display:flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
+    
+}
+.menu{
+    width: 84px;
+    background-color: var(--backgroundWidget);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: var(--cardRadius) 0 0 var(--cardRadius);
+}
+.menu-item{
+    margin: 12px;
+}
+.widgetContainer{
+    width: 940px;
+    height: 480px;
+    padding: 40px 25px;
+    display: grid;
 
+    grid-template-columns: repeat(13, 50px);
+    grid-template-rows: repeat(6, 50px);
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.widgetContainer .heatMap{
+    grid-column: 9;
+}
+.widgetContainer .velocimetro{
+    grid-column: 7;
+}
+
+.widgetContainer .batteryContainer{
+    grid-column: 7;
+    grid-row: 5;
+}
+
+.widgetContainer .Solar{
+    grid-column: 7;
+    grid-row: 3;
 }
 h1{
     font-family: 'Work Sans';
@@ -97,6 +145,16 @@ h5.semibold{
     font-style: normal;
     font-size: 12px;
     font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -0.01em;
+
+}
+
+.auxiliarBold{
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 700;
     line-height: 14px;
     letter-spacing: -0.01em;
 

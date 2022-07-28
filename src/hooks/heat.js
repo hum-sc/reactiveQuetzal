@@ -53,7 +53,7 @@ export function useHeatSensors(){
     const updateCabValues = () => {
     } 
     useEffect(()=>{
-        let wheels = setInterval(updateWheelsValues, 2000)
+        let wheels = setInterval(updateWheelsValues, 1000)
         
 
         return ()=>{
@@ -63,7 +63,7 @@ export function useHeatSensors(){
     });
 
     useEffect(()=>{
-        let cab = setInterval(updateCabValues, 2000)
+        let cab = setInterval(updateCabValues, 1000)
         return () => {
             clearInterval(cab);
         }

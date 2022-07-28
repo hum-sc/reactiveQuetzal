@@ -1,48 +1,40 @@
-.batteryContainer{
+.Solar{
     position: relative;
-    width: 120px;
     height: 120px;
-    border-radius: 20px;
+    width: 120px;
+    border-radius: 50%;
     background-color: var(--backgroundWidget);
 }
-
-.batteryIcon{
-    
-position: absolute;
-width: 60px;
-height: 60px;
-left: 0;
-right: 0;
-top: calc(50% - 60px);
-margin: auto;
-
-transform: rotate(90deg);
+.solIcon{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 7%;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
-
-.charge{
+.Solar h3{
     position: absolute;
     width: fit-content;
     left: 0;
     right: 0;
-    top: 36%;
+    top:30%;
     margin: auto;
 }
-.duration{
+.Solar .auxiliar{
     position: absolute;
     width: fit-content;
     color: var(--secondary);
     left: 0;
     right: 0;
-    bottom: 26%;
     margin: auto;
 }
 
-.km{
-    position: absolute;
-    width: fit-content;
-    color: var(--secondary);
-    left: 0;
-    right: 0;
-    bottom: 10%;
-    margin: auto;
+.percentage{
+    top: 60%;
+}
+
+.heat{
+    top: 75%;
 }

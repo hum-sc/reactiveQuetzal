@@ -1,6 +1,6 @@
 .navigationMap{
     height: 400px;
-    width: 700px;
+    width: 400px;
     position: relative;
     display: flex;
     flex-direction: column;

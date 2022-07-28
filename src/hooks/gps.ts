@@ -8,7 +8,6 @@ export default function useGps(){
 
         setLng(e.coords.longitude)
         setLat(e.coords.latitude)
-        console.log(lng, lat)
     }
     const errorGps = () =>{
     }
